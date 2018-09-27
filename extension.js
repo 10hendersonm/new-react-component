@@ -62,6 +62,10 @@ export default ${componentName}
         if (fs.existsSync(fullPath)) return vscode.window.showErrorMessage(`File '${fsName}' already exists.`)
         fs.writeFileSync(fullPath, componentText, 'utf8')
         vscode.window.showInformationMessage(`Created component '${componentName}'.`)
+        vscode.workspace.openTextDocument(fullPath)
+          .then((doc) => {
+            vscode.window.showTextDocument(doc)
+          })
       })
     })
   });
