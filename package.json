@@ -31,7 +31,8 @@
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
+        "test": "node ./node_modules/vscode/bin/test",
+        "deploy": "rm -rf %USERPROFILE%/.vscode/extensions/new-react-component && cp -r . %USERPROFILE%/.vscode/extensions/new-react-component"
     },
     "devDependencies": {
         "typescript": "^2.6.1",
