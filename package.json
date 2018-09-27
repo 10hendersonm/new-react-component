@@ -1,0 +1,43 @@
+{
+    "name": "new-react-component",
+    "displayName": "new-react-component",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "10hendersonm",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.newReactComponent"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "menus": {
+          "explorer/context": [{
+            "command": "extension.newReactComponent",
+            "when": "explorerResourceIsFolder",
+            "group": "navigation@10"
+          }]
+        },
+        "commands": [
+            {
+                "command": "extension.newReactComponent",
+                "title": "New React Component"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
